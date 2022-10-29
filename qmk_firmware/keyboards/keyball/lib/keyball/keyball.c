@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
+#include <stdio.h>
 #include "quantum.h"
 #ifdef SPLIT_KEYBOARD
 #    include "transactions.h"
@@ -387,20 +387,16 @@ void keyball_oled_render_keyinfo(void) {
     //     Ball:   0   0   0   0
     //
     uint8_t keycode = keyball.last_kc;
-
-    oled_write_P(PSTR("Key :  R"), false);
-    oled_write_char(to_1x(keyball.last_pos.row), false);
-    oled_write_P(PSTR("  C"), false);
-    oled_write_char(to_1x(keyball.last_pos.col), false);
     if (keycode) {
         oled_write_P(PSTR(" K"), false);
         oled_write_char(to_1x(keycode >> 4), false);
         oled_write_char(to_1x(keycode), false);
     }
     if (keycode >= 4 && keycode < 57) {
-        oled_write_P(PSTR("  '"), false);
+        oled_write_P(PSTR(" '"), false);
         char name = pgm_read_byte(code_to_name + keycode - 4);
         oled_write_char(name, false);
+        oled_write_ln_P(PSTR(" "), false);
     } else {
         oled_advance_page(true);
     }

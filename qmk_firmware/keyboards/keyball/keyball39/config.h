@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // USB Device descriptor parameters
 #define VENDOR_ID           0x5957      // "YW" = Yowkees
-#define PRODUCT_ID          0x0200      
+#define PRODUCT_ID          0x0200
 #define DEVICE_VER          0x0001
 #define MANUFACTURER        Yowkees
 #define PRODUCT             Keyball39
@@ -40,7 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SOFT_SERIAL_PIN         D2
 #define SPLIT_HAND_MATRIX_GRID  F6, B5
 #define SPLIT_USB_DETECT
-#define SPLIT_USB_TIMEOUT       500
+// Mac だと SPLIT_USB_TIMEOUT の値を 2000 以上にしないとキーボードがなかなか認識されない。
+// Linux だと 1000 くらいで認識される。
+#define SPLIT_USB_TIMEOUT       2500
 
 #define SPLIT_TRANSACTION_IDS_KB KEYBALL_GET_INFO, KEYBALL_GET_MOTION, KEYBALL_SET_CPI
 
