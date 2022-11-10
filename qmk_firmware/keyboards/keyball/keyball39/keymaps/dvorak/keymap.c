@@ -69,20 +69,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_QUOT     , KC_COMM  , KC_DOT   , KC_P            , KC_Y                 ,                                 KC_F     , KC_G     , KC_C     , KC_R     , KC_L     ,
     KC_A        , KC_O     , KC_E     , KC_U            , KC_I                 ,                                 KC_D     , KC_H     , KC_T     , KC_N     , KC_S     ,
     KC_SCLN     , KC_Q     , KC_J     , KC_K            , KC_X                 ,                                 KC_B     , KC_M     , KC_W     , KC_V     , KC_Z     ,
-    MOUSE       , XXXXX    , XXXXX    , RGUI_T(KC_ESC)  , LT(_LOWER, KC_MINS)  , KC_CTLTB , LT(_RAISE, KC_ENT) , KC_MT_SS ,XXXXX    , XXXXX    , XXXXX     , MOUSE
+    MOUSE       , XXXXX    , XXXXX    , RGUI_T(KC_ESC)  , LT(_LOWER, KC_MINS)  , XXXXX ,    LT(_RAISE, KC_ENT) , KC_MT_SS ,XXXXX    , XXXXX    , XXXXX     , MOUSE
   ),
 
   [_LOWER] = LAYOUT_universal(
     CTRL_SHFT   , KC_S     , KC_P     , XXXXX    , KC_TAB   ,                      KC_CIRC   , KC_AMPR  , KC_UP    , KC_LPRN  , KC_RPRN  ,
     KC_CTLTB    , KC_A     , KC_Z     , KC_C     , KC_X     ,                      KC_HOME   , KC_LEFT  , KC_DOWN  , KC_RIGHT , KC_BSPC  ,
-    XXXXX       , XXXXX    , XXXXX    , XXXXX    , XXXXX    ,                      KC_END    , KC_ENT   ,  XXXXX   , XXXXX    , KC_DEL   ,
+    XXXXX       , XXXXX    , XXXXX    , XXXXX    , XXXXX    ,                      KC_END    , KC_ENT   , KC_LBRC  , KC_RBRC  , KC_DEL   ,
     XXXXX       , XXXXX    , XXXXX    , KC_RGUI  , LOWER    , KC_RALT  ,  ADJUST,  KC_MT_SS  , XXXXX    ,  XXXXX   , XXXXX    , XXXXX
   ),
 
   [_RAISE] = LAYOUT_universal(
-    KC_1     , KC_2     , KC_3     , KC_4     , KC_5     ,                      XXXXX    ,  XXXXX    , KC_TAB   , KC_SLSH  , S(KC_SLSH)  ,
-    KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,                      KC_PIPE  ,  KC_BSLS  , KC_GRV   , KC_EQL   , KC_EQL      ,
-    XXXXX    , XXXXX    , XXXXX    , XXXXX    , XXXXX    ,                      KC_ENT   ,  KC_PLUS  , KC_TILD  , XXXXX    , XXXXX       ,
+    KC_1     , KC_2     , KC_3     , KC_4     , KC_5     ,                      KC_LBRC  ,  KC_RBRC  , KC_TAB   , KC_SLSH  , S(KC_SLSH)  ,
+    KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,                      KC_PIPE  ,  KC_BSLS  , KC_GRV   , KC_EQL   , KC_RSFT     ,
+    KC_LCTL  , KC_LSFT  , XXXXX    , XXXXX    , XXXXX    ,                      KC_ENT   ,  KC_PLUS  , KC_TILD  , XXXXX    , KC_RSFT     ,
     XXXXX    , XXXXX    , XXXXX    , KC_RGUI  , ADJUST   , KC_RALT,  XXXXX   ,  XXXXX    ,  XXXXX    , XXXXX    , XXXXX    , XXXXX
   ),
 
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TRACKB      , MV_LTAB   , XXXXX     , MV_RTAB   , XXXXX       ,                        XXXXX       , MV_LTAB   , XXXXX     , MV_RTAB , XXXXX     ,
     GO_L_MOUSE  , LCLICK    , CCLICK    , RCLICK    , GO_L_MOUSE  ,                        GO_L_MOUSE  , LCLICK    , CCLICK    , RCLICK  , SCRL_MODE ,
     GO_L_DVORAK , BACK      , SCRL_MODE , FORWARD   , GO_L_DVORAK ,                        GO_L_DVORAK , BACK      , SCRL_MODE , FORWARD , XXXXX     ,
-    XXXXX       , XXXXX     , XXXXX     , KC_ESC    , GO_L_DVORAK , KC_CTLTB ,   KC_ENT  , KC_SPC      , XXXXX     , XXXXX     , XXXXX   , XXXXX
+    XXXXX       , XXXXX     , XXXXX     , KC_ESC    , GO_L_DVORAK , KC_CTLTB ,   KC_ENT  , KC_MT_SS    , XXXXX     , XXXXX     , XXXXX   , XXXXX
   ),
 
   [_TRACKBALL_SETTING] = LAYOUT_universal(
